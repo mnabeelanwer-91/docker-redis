@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t mnabeelanwer/frontend_web1 -f Dockerfile.dev .
+  - docker build -t mnabeelanwer/frontend_web1 -f dockerfile.dev .
 
 script:
   - docker run -e CI=true mnabeelanwer/frontend_web1 npm run test
